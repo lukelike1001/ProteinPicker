@@ -7,7 +7,7 @@ from tensorflow import keras
 
 # load the pre-trained model from the appropriate file path
 def predict_plant(path):
-    model = tf.keras.models.load_model('saved_model/')
+    model = tf.keras.models.load_model('saved_model/protein_model.keras')
 
     # redefine values from the model
     img_height = img_width = 180
@@ -29,12 +29,10 @@ def predict_plant(path):
     return confidences
 
 # add a title and description to the model
-title = "Leaftracker Interactive Model"
-description = """Leaftracker is an image classification model that differentiates toxic plants from their
-                 non-toxic look-alikes. Built on TensorFlow, this interactive model has been ported to
-                 Hugging Face as a web application. For further documentation, check out the Github
-                 repository at https://github.com/lukelike1001/LeafTracker, and the project's info
-                 page at https://lukelike1001.github.io/leaf.html."""
+title = "Protein Picker Model"
+description = """
+              Protein Picker Model. A CS562 Project.
+              """
 
 # launch the app
 app = gr.Interface(
@@ -45,10 +43,8 @@ app = gr.Interface(
     title=title,
     description=description,
     examples=[
-        os.path.join(os.path.dirname(__file__), "tpc-imgs/bear_oak/000.jpg"),
-        os.path.join(os.path.dirname(__file__), "tpc-imgs/boxelder/000.jpg"),
-        os.path.join(os.path.dirname(__file__), "tpc-imgs/poison_sumac/000.jpg"),
-        os.path.join(os.path.dirname(__file__), "tpc-imgs/western_poison_oak/000.jpg"),
+        os.path.join(os.path.dirname(__file__), "coagulation_test.png"),
+        os.path.join(os.path.dirname(__file__), "2FAK_test.png"),
     ],
 )
 app.launch(share=True)
