@@ -1,4 +1,4 @@
-# import library dependencies, tested on python 3.11.2
+# import library dependencies, tested on python 3.9.6
 import gradio as gr
 import numpy as np
 import os
@@ -11,11 +11,7 @@ def predict_plant(path):
 
     # redefine values from the model
     img_height = img_width = 180
-    class_names = ['bear_oak', 'boxelder', 'eastern_poison_ivy',
-                   'eastern_poison_oak', 'fragrant_sumac',
-                   'jack_in_the_pulpit', 'poison_sumac',
-                   'virginia_creeper', 'western_poison_ivy',
-                   'western_poison_oak']
+    class_names = ['2fak', 'coagulation_factor_v']
     
     # load the image into a variable
     img = tf.keras.utils.load_img(
@@ -44,7 +40,7 @@ description = """Leaftracker is an image classification model that differentiate
 app = gr.Interface(
     fn=predict_plant,
     inputs=gr.Image(type="filepath"),
-    outputs=gr.Label(num_top_classes=3),
+    outputs=gr.Label(num_top_classes=2),
     flagging_options=["incorrect", "other"],
     title=title,
     description=description,
