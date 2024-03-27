@@ -13,6 +13,7 @@ def mrc_to_png(input_mrc_file, output_directory):
             # Save as PNG
             image.save(f"{output_directory}/slice_{i:03d}.png")
 
-# Example usage
-mrc_to_png("mrc/2fak/atlas_fix_2fak.mrc", "png-imgs/2fak")
-mrc_to_png("mrc/coagulation/atlas_AF_Q4R562_F1_model_v4.mrc", "png-imgs/coagulation")
+# Generate PNG images from MRC file
+# mrc_to_png("mrc/2fak/atlas_fix_2fak.mrc", "png-imgs/2fak")
+# mrc_to_png("mrc/coagulation/atlas_AF_Q4R562_F1_model_v4.mrc", "png-imgs/coagulation")
+mrc_to_png("mrc/test/Test.mrc", "png-imgs/test")
