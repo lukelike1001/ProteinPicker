@@ -12,12 +12,12 @@ def generate_batch_png(input_filepath, output_filepath):
 cwd = os.getcwd()
 
 # Generate PNG images for BLTP2, Coagulation, and RIF1
-# Batch 1: Atlas files
+# Batch 1: Atlas files (w/out membrane)
 generate_batch_png("mrc/atlas-mrc/bltp2", "imgs/atlas-imgs/bltp2")
 generate_batch_png("mrc/atlas-mrc/coagulation", "imgs/atlas-imgs/coagulation")
 generate_batch_png("mrc/atlas-mrc/rif1", "imgs/atlas-imgs/rif1")
 
-# Batch 2: Tomogram files
+# Batch 2: Tomogram files (w/out membrane)
 generate_batch_png("mrc/tomogram-mrc/bltp2", "imgs/tomogram-imgs/bltp2")
 generate_batch_png("mrc/tomogram-mrc/coagulation", "imgs/tomogram-imgs/coagulation")
 generate_batch_png("mrc/tomogram-mrc/rif1", "imgs/tomogram-imgs/rif1")

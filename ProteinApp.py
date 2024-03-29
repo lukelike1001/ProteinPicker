@@ -6,7 +6,7 @@ import tensorflow as tf
 from tensorflow import keras
 
 # load the pre-trained model from the appropriate file path
-def predict_plant(path):
+def predict_protein(path):
     model = tf.keras.models.load_model('saved_model/protein_model.keras')
 
     # redefine values from the model
@@ -36,7 +36,7 @@ description = """
 
 # launch the app
 app = gr.Interface(
-    fn=predict_plant,
+    fn=predict_protein,
     inputs=gr.Image(type="filepath"),
     outputs=gr.Label(num_top_classes=2),
     flagging_options=["incorrect", "other"],
