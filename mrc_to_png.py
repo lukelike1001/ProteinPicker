@@ -9,6 +9,6 @@ def mrc_to_png(input_mrc_file, filename, output_directory):
 
             # Convert to PIL Image
             image = Image.fromarray(data_slice)
-
+            
             # Save as PNG
             image.save(f"{output_directory}/{filename}_slice_{i:03d}.png")
