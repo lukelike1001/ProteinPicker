@@ -7,11 +7,11 @@ from tensorflow import keras
 
 # load the pre-trained model from the appropriate file path
 def predict_protein(path):
-    model = tf.keras.models.load_model('saved_model/protein_model.keras')
+    model = tf.keras.models.load_model('saved_model/atlas/atlas_model.keras')
 
     # redefine values from the model
-    img_height = img_width = 180
-    class_names = ['2fak', 'coagulation_factor_v']
+    img_height = img_width = 100
+    class_names = ['bltp2', 'coagulation', 'rif1']
     
     # load the image into a variable
     img = tf.keras.utils.load_img(
@@ -43,8 +43,8 @@ app = gr.Interface(
     title=title,
     description=description,
     examples=[
-        os.path.join(os.path.dirname(__file__), "coagulation_test.png"),
-        os.path.join(os.path.dirname(__file__), "2FAK_test.png"),
+        os.path.join(os.path.dirname(__file__), "saved_model/atlas/coagulation_model_slice_094.png"),
+        os.path.join(os.path.dirname(__file__), "saved_model/atlas/coagulation_slice_038.png"),
     ],
 )
 app.launch(share=True)
