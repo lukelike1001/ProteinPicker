@@ -1,8 +1,6 @@
 # ProteinPicker
 
-This Github repository holds all of the code used to train the atlas and tomogram models featured in our CS562 final Project
-
-As a general overview of how the repository is structured:
+This Github repository holds all of the code used to train the atlas and tomogram models featured in our CS562 Final Project. As a general overview of how the repository is structured:
 
 - `archive`: holds various code files that are no longer used by the ProteinPicker project
 - `imgs`: holds 2D slices of MRC files, back from when the model was originally a 2D CNN model. These images are no longer used for the updated 3D CNN model.
