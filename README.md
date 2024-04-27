@@ -1,5 +1,19 @@
 # ProteinPicker
 
+### Dependencies
+
+The synthetic tomograms (represented as MRC files) used for our machine learning models have been generated using cryo-TomoSim. The software can be downloaded at their Github repository at: https://github.com/carsonpurnell/cryotomosim_CTS
+
+### PDB Files
+
+There are three protein classes that our protein classification model has been trained on. Their AlphaFold entries were provided in the paper, but their entries can also be found here for convenience:
+
+- Protein KIAA0100 (BLTP2): https://alphafold.ebi.ac.uk/entry/Q14667
+- Coagulation Factor V: https://alphafold.ebi.ac.uk/entry/P12259
+- Telomere-associated protein RIF1: https://alphafold.ebi.ac.uk/entry/Q5UIP0
+
+### Structure
+
 This Github repository holds all of the code used to train the atlas and tomogram models featured in our CS562 Final Project. As a general overview of how the repository is structured:
 
 - `archive`: holds various code files that are no longer used by the ProteinPicker project
